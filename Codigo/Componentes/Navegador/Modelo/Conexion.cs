@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 //Libreria--------
+//Revisión Rene Barrientos 0901-19-12640 fecha 2/03/2023
 using System.Data.Odbc;
 
 namespace NavegadorModelo
