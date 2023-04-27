@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CapaVista">
+      <HintPath>..\..\..\..\..\SegundoParcial\CapaVista\bin\Debug\CapaVista.dll</HintPath>
+    </Reference>
     <Reference Include="CapaVistaNomina, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\Modulos\Nominas\MDI_Nominas\CapaVistaNomina\bin\Debug\CapaVistaNomina.dll</HintPath>
