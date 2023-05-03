@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaVista;
 using Seguridad_Controlador;
 
 
@@ -38,7 +39,7 @@ namespace Vista_Seguridad
                 Controlador.Username = Controlador.SetHash(TBusuario.Text);
 
                 
-                Menup b = new Menup();
+                Mdi b = new Mdi();
                 cn.setBtitacora("1", "Ingreso Login");
                 b.Show();
                 this.Hide();
