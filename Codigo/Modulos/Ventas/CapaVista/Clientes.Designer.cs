@@ -29,10 +29,24 @@ namespace CapaVista
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Clientes));
             this.barratitulo = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.navegador1 = new NavegadorVista.Navegador();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txt_abonosacum = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txt_cargosacum = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.txt_abonomes = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txt_cargomes = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txt_saldoactual = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txt_smesanterior = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.txt_direccion = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txt_estado = new System.Windows.Forms.TextBox();
@@ -54,18 +68,6 @@ namespace CapaVista
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txt_saldoactual = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txt_smesanterior = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.txt_abonomes = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.txt_cargomes = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.txt_abonosacum = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.txt_cargosacum = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
             this.barratitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -74,6 +76,7 @@ namespace CapaVista
             // barratitulo
             // 
             this.barratitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.barratitulo.Controls.Add(this.button1);
             this.barratitulo.Controls.Add(this.navegador1);
             this.barratitulo.Controls.Add(this.dataGridView1);
             this.barratitulo.Controls.Add(this.panel1);
@@ -83,9 +86,22 @@ namespace CapaVista
             this.barratitulo.Size = new System.Drawing.Size(1305, 664);
             this.barratitulo.TabIndex = 3;
             // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(14, 14);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(77, 69);
+            this.button1.TabIndex = 4;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // navegador1
             // 
             this.navegador1.Location = new System.Drawing.Point(359, 51);
+            this.navegador1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.navegador1.Name = "navegador1";
             this.navegador1.Size = new System.Drawing.Size(576, 154);
             this.navegador1.TabIndex = 3;
@@ -96,6 +112,7 @@ namespace CapaVista
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(14, 428);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(1272, 221);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.Tag = "tbl_clientes";
@@ -134,10 +151,125 @@ namespace CapaVista
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(14, 211);
+            this.panel1.Location = new System.Drawing.Point(22, 213);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1272, 196);
             this.panel1.TabIndex = 1;
+            // 
+            // txt_abonosacum
+            // 
+            this.txt_abonosacum.Location = new System.Drawing.Point(1089, 156);
+            this.txt_abonosacum.Name = "txt_abonosacum";
+            this.txt_abonosacum.Size = new System.Drawing.Size(156, 20);
+            this.txt_abonosacum.TabIndex = 33;
+            this.txt_abonosacum.Tag = "AbonosAcumulados_clientes";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Mongolian Baiti", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.White;
+            this.label16.Location = new System.Drawing.Point(947, 154);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(136, 16);
+            this.label16.TabIndex = 32;
+            this.label16.Text = "Abonos acumulados";
+            // 
+            // txt_cargosacum
+            // 
+            this.txt_cargosacum.Location = new System.Drawing.Point(1089, 114);
+            this.txt_cargosacum.Name = "txt_cargosacum";
+            this.txt_cargosacum.Size = new System.Drawing.Size(156, 20);
+            this.txt_cargosacum.TabIndex = 31;
+            this.txt_cargosacum.Tag = "CargosAcumulados_clientes";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Mongolian Baiti", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.White;
+            this.label17.Location = new System.Drawing.Point(947, 114);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(131, 16);
+            this.label17.TabIndex = 30;
+            this.label17.Text = "Cargos acumulados";
+            // 
+            // txt_abonomes
+            // 
+            this.txt_abonomes.Location = new System.Drawing.Point(1089, 74);
+            this.txt_abonomes.Name = "txt_abonomes";
+            this.txt_abonomes.Size = new System.Drawing.Size(156, 20);
+            this.txt_abonomes.TabIndex = 29;
+            this.txt_abonomes.Tag = "AbonosMes_clientes";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Mongolian Baiti", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(947, 72);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(103, 16);
+            this.label14.TabIndex = 28;
+            this.label14.Text = "Abono del mes";
+            // 
+            // txt_cargomes
+            // 
+            this.txt_cargomes.Location = new System.Drawing.Point(1089, 32);
+            this.txt_cargomes.Name = "txt_cargomes";
+            this.txt_cargomes.Size = new System.Drawing.Size(156, 20);
+            this.txt_cargomes.TabIndex = 27;
+            this.txt_cargomes.Tag = "CargoMes_clientes";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Mongolian Baiti", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(947, 32);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(98, 16);
+            this.label15.TabIndex = 26;
+            this.label15.Text = "Cargo del mes";
+            // 
+            // txt_saldoactual
+            // 
+            this.txt_saldoactual.Location = new System.Drawing.Point(765, 152);
+            this.txt_saldoactual.Name = "txt_saldoactual";
+            this.txt_saldoactual.Size = new System.Drawing.Size(156, 20);
+            this.txt_saldoactual.TabIndex = 25;
+            this.txt_saldoactual.Tag = "SActual_clientes";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Mongolian Baiti", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(623, 150);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(84, 16);
+            this.label12.TabIndex = 24;
+            this.label12.Text = "Saldo actual";
+            // 
+            // txt_smesanterior
+            // 
+            this.txt_smesanterior.Location = new System.Drawing.Point(765, 110);
+            this.txt_smesanterior.Name = "txt_smesanterior";
+            this.txt_smesanterior.Size = new System.Drawing.Size(156, 20);
+            this.txt_smesanterior.TabIndex = 23;
+            this.txt_smesanterior.Tag = "SMesAnterior_clientes";
+            this.txt_smesanterior.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Mongolian Baiti", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(623, 110);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(124, 16);
+            this.label13.TabIndex = 22;
+            this.label13.Text = "Saldo mes anterior";
             // 
             // txt_direccion
             // 
@@ -340,128 +472,15 @@ namespace CapaVista
             this.label1.TabIndex = 0;
             this.label1.Text = "Clientes";
             // 
-            // txt_saldoactual
-            // 
-            this.txt_saldoactual.Location = new System.Drawing.Point(765, 152);
-            this.txt_saldoactual.Name = "txt_saldoactual";
-            this.txt_saldoactual.Size = new System.Drawing.Size(156, 20);
-            this.txt_saldoactual.TabIndex = 25;
-            this.txt_saldoactual.Tag = "SActual_clientes";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Mongolian Baiti", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(623, 150);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(84, 16);
-            this.label12.TabIndex = 24;
-            this.label12.Text = "Saldo actual";
-            // 
-            // txt_smesanterior
-            // 
-            this.txt_smesanterior.Location = new System.Drawing.Point(765, 110);
-            this.txt_smesanterior.Name = "txt_smesanterior";
-            this.txt_smesanterior.Size = new System.Drawing.Size(156, 20);
-            this.txt_smesanterior.TabIndex = 23;
-            this.txt_smesanterior.Tag = "SMesAnterior_clientes";
-            this.txt_smesanterior.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Mongolian Baiti", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(623, 110);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(124, 16);
-            this.label13.TabIndex = 22;
-            this.label13.Text = "Saldo mes anterior";
-            // 
-            // txt_abonomes
-            // 
-            this.txt_abonomes.Location = new System.Drawing.Point(1089, 74);
-            this.txt_abonomes.Name = "txt_abonomes";
-            this.txt_abonomes.Size = new System.Drawing.Size(156, 20);
-            this.txt_abonomes.TabIndex = 29;
-            this.txt_abonomes.Tag = "AbonosMes_clientes";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Mongolian Baiti", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(947, 72);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(103, 16);
-            this.label14.TabIndex = 28;
-            this.label14.Text = "Abono del mes";
-            // 
-            // txt_cargomes
-            // 
-            this.txt_cargomes.Location = new System.Drawing.Point(1089, 32);
-            this.txt_cargomes.Name = "txt_cargomes";
-            this.txt_cargomes.Size = new System.Drawing.Size(156, 20);
-            this.txt_cargomes.TabIndex = 27;
-            this.txt_cargomes.Tag = "CargoMes_clientes";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Mongolian Baiti", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(947, 32);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(98, 16);
-            this.label15.TabIndex = 26;
-            this.label15.Text = "Cargo del mes";
-            // 
-            // txt_abonosacum
-            // 
-            this.txt_abonosacum.Location = new System.Drawing.Point(1089, 156);
-            this.txt_abonosacum.Name = "txt_abonosacum";
-            this.txt_abonosacum.Size = new System.Drawing.Size(156, 20);
-            this.txt_abonosacum.TabIndex = 33;
-            this.txt_abonosacum.Tag = "AbonosAcumulados_clientes";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Mongolian Baiti", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(947, 154);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(136, 16);
-            this.label16.TabIndex = 32;
-            this.label16.Text = "Abonos acumulados";
-            // 
-            // txt_cargosacum
-            // 
-            this.txt_cargosacum.Location = new System.Drawing.Point(1089, 114);
-            this.txt_cargosacum.Name = "txt_cargosacum";
-            this.txt_cargosacum.Size = new System.Drawing.Size(156, 20);
-            this.txt_cargosacum.TabIndex = 31;
-            this.txt_cargosacum.Tag = "CargosAcumulados_clientes";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Mongolian Baiti", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(947, 114);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(131, 16);
-            this.label17.TabIndex = 30;
-            this.label17.Text = "Cargos acumulados";
-            // 
             // Clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1329, 686);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(1292, 609);
             this.Controls.Add(this.barratitulo);
             this.Name = "Clientes";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Clientes";
             this.barratitulo.ResumeLayout(false);
             this.barratitulo.PerformLayout();
@@ -511,5 +530,6 @@ namespace CapaVista
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txt_smesanterior;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button button1;
     }
 }

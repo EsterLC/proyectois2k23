@@ -37,12 +37,18 @@
     <Reference Include="CapaModelo">
       <HintPath>..\CapaControlador\bin\Debug\CapaModelo.dll</HintPath>
     </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="NavegadorVista">
-      <HintPath>..\..\Codigo\Componentes\Navegador\Vista\bin\Debug\NavegadorVista.dll</HintPath>
+      <HintPath>..\..\..\Componentes\Navegador\Vista\bin\Debug\NavegadorVista.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -64,11 +70,35 @@
     <Compile Include="Mdi.Designer.cs">
       <DependentUpon>Mdi.cs</DependentUpon>
     </Compile>
+    <Compile Include="MenuAyudaClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuAyudaClientes.Designer.cs">
+      <DependentUpon>MenuAyudaClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuAyudaVendedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuAyudaVendedores.Designer.cs">
+      <DependentUpon>MenuAyudaVendedores.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteCliente.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteCliente.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReporteClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteClientes.Designer.cs">
+      <DependentUpon>ReporteClientes.cs</DependentUpon>
     </Compile>
     <Compile Include="Vendedores.cs">
       <SubType>Form</SubType>
@@ -84,9 +114,22 @@
     <EmbeddedResource Include="Mdi.resx">
       <DependentUpon>Mdi.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MenuAyudaClientes.resx">
+      <DependentUpon>MenuAyudaClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuAyudaVendedores.resx">
+      <DependentUpon>MenuAyudaVendedores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteCliente.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteCliente.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteClientes.resx">
+      <DependentUpon>ReporteClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vendedores.resx">
       <DependentUpon>Vendedores.cs</DependentUpon>
@@ -101,6 +144,9 @@
       <Project>{a5148a0a-3e21-4ac7-a7e7-ae2f7ffba8cb}</Project>
       <Name>CapaModelo_Ventas</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
